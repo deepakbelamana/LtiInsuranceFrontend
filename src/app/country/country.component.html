@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <style>
+    
+    </style>
+    <body>
+        <img src="assets\travel.jpeg" >
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label"><h5>Travel From</h5></label>
+        <select [(ngModel)]="country"  class="form-control" id="exampleFormControlInput1">
+            <option *ngFor="let cf of cont"  value="{{cf}}">{{cf}}</option>
+        </select>    
+      </div>
+
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label"><h5>Travel To</h5></label>
+        <select [(ngModel)]="countryto" class="form-control" id="exampleFormControlInput1">
+            <option *ngFor="let ct of cont"  value="{{ct}}" >{{ct}}</option>
+        </select>    
+      </div>
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h5>Number of Days</h5></label>
+        <input type="text"  name="days" [(ngModel)]="days" required class="form-control" id="exampleFormControlInput1" placeholder="Enter no of Days">
+      </div>
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label"><h5>Plans Avaliable</h5></label>
+        <select [(ngModel)]="p1" class="form-control" id="exampleFormControlInput1"> <option *ngFor="let p of plan" value ="{{p}}">{{p}}</option></select>    
+      </div>           
+               
+         <button  class="btn btn-dark" (click)="Calculate()" style="margin-left: 100px;" >Calculate</button>  
+            
+         <div class="mb-3" style="width: 180px;height:150px;margin:70px; border-style:groove; text-align: center;" class="bg-success p-2 text-dark bg-opacity-25">
+            <label for="exampleFormControlInput1" class="form-label" for="days"><h5>Insurance Cost</h5></label>
+            <p style="font-weight: bold;">{{p1}} Plan Cost: <br>{{price}}</p>      
+          </div>
+        </div>
+
+        
+        
+</body>
+
+
+</html>

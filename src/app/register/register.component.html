@@ -1,0 +1,48 @@
+
+<form #myForm="ngForm" (ngSubmit)="saveData()">
+    <div class="position-absolute top-50 start-50 translate-middle" style="border-style:groove;">
+        <div style="margin-left:20px; margin-top:15px">
+    <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Register Here </h2>
+    <br>
+    <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h6>First Name &nbsp;&nbsp;&nbsp;&nbsp;</h6></label>
+        <input type="text"  name="firstname" [(ngModel)]="user.firstname" required  id="exampleFormControlInput1" placeholder="Enter First Name">
+      </div>
+    
+    
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Last Name &nbsp;&nbsp;&nbsp;&nbsp;</h6></label>
+        <input type="text"  name="lastname" [(ngModel)]="user.lastname" required  id="exampleFormControlInput1" placeholder="Enter Last Name">
+      </div>
+    
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Email Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h6></label>
+        <input type="email"  name="email" [(ngModel)]="user.email" required  id="exampleFormControlInput1" placeholder="Enter Email Id">
+      </div>
+    
+    
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Date of Birth &nbsp;</h6></label>
+        <input type="text"  name="dob" [(ngModel)]="user.dob" required  id="exampleFormControlInput1" placeholder="DD/MM/YYYY">
+      </div>
+    
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Contact No &nbsp;&nbsp;&nbsp;</h6></label>
+        <input type="text"  name="contactno" [(ngModel)]="user.contactno" required  id="exampleFormControlInput1" placeholder="Enter 10 digit Number">
+      </div>
+    
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h6></label>
+        <input type="text"  name="address" [(ngModel)]="user.address" required  id="exampleFormControlInput1" placeholder="Enter Address">
+      </div>
+    
+      <div class="mb-3" style="width: 300px;">
+        <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h6></label>
+        <input type="text"  name="password" [(ngModel)]="user.password" required  id="exampleFormControlInput1" placeholder="Enter Password">
+      </div>
+    
+      <button  class="btn btn-dark"  style="margin-left: 100px;" >Register</button>  
+      
+       </div>
+       </div>
+       </form>

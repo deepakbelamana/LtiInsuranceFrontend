@@ -1,0 +1,12 @@
+.input-group
+{
+    margin:10px;
+}
+.btn, .btn-secondary, .btn-sm{
+    margin:20px;
+}
+.shadow-sm ,.p-3,.mb-5 ,.bg-white ,.rounded
+{
+    margin: 10px;
+    border-radius: 5px;
+}

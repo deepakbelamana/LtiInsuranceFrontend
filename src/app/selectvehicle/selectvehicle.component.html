@@ -1,0 +1,53 @@
+
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+
+    <button class="btn btn-outline-dark" (click)="gettwowheeler()">Two wheeler</button>  <button class="btn btn-outline-dark" (click)="getfourwheeler()">FourWheeler</button> 
+    
+    <table class="table table-striped">
+      <thead class="thead-light">
+<tr>
+     <td><p>select the vehcile manufacturer</p></td>
+     <td> <select  [(ngModel)]="makername"  (change)="getmodel()"> 
+      <option disabled select="selected" value> -- select the manufacturer-- </option>
+       <option *ngFor="let makers of maker">{{makers}}</option>
+       </select>
+   </td>
+</tr>
+<tr>
+    <td><p>select the vehcile model</p></td>
+  <td>
+    <select [(ngModel)]="modelname"> 
+      <option disabled select="selected" value> -- select the model-- </option> 
+    <option *ngFor="let models of model">{{models}}</option>
+    </select>
+  </td>
+</tr>
+<tr>
+    <td><p>enter the age of vehicle</p></td>
+    <td>
+    <input type="number" [(ngModel)]="vehicleage" placeholder="enter age of the vehicle"/>
+</td>
+</tr>
+</thead>
+</table>
+
+  <button (click)="getpremium(vehicleage,makername,modelname)" class="btn btn-dark">calculate</button>
+
+
+
+<div *ngIf="divdisplay">
+    <table class="table table-striped">
+      <thead class="thead-light">
+        <tr>
+            <h1>Third party liability:</h1>
+            <td><p>{{tpl}}</p></td>
+        </tr>
+    <tr>
+        <h1>Comprehensive:</h1>
+        <td><p>{{comp}}</p></td>
+    </tr>
+       </thead>   
+    </table>
+</div>
+</div>
+

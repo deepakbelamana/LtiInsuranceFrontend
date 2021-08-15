@@ -1,0 +1,14 @@
+<p>Home Component works!</p>
+
+<div style="text-align: center;">
+        <tr style="position: absolute;top: 0;right: 0;margin-top: 120px;">
+            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn btn-outline-primary btn-block">Buy Vehicle Insurance</button>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Buy Travel Insurance</button><br>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Calculate Vehicle Premium</button>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Calculate Travel Premium</button><br>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Renew Vehicle Insurance</button><br>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" >Claims</button><br>
+            <button type="text" style="margin: 10px;" routerLink="/exit" class="btn btn-outline-primary btn-block" *ngIf="showbutton" (click)="done()">Logout</button>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" *ngIf="showloginbutton">Login Again</button>
+        </tr>
+</div>

@@ -1,0 +1,67 @@
+
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+<h1>renew your policy</h1>
+
+<table class="table table-striped ">
+    <caption>List of policies </caption>
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">policy no</th>
+        <th scope="col">vehicle model</th>
+        <th scope="col">vehicle maker</th>
+        <th scope="col">policy Start date</th>
+        <th scope="col">policy end date</th>
+        <th scope="col">insurance amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of userdata">
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+        <td>{{data[4]}}</td>
+        <td>{{data[5]}}</td>
+  
+    </tr>
+   </tbody>  
+</table>
+
+
+<div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">sele your policy to renew </span>
+    </div>
+<select id="selectpolicy" class="form-select" aria-label="Default select example" [(ngModel)]="selectedpolicyno" >
+    <option selected  >select the policy to renew </option>
+    <option  *ngFor="let data of userdata">{{data[0]}}</option>
+</select>
+</div>
+<div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">enter age of the vehicle</span>
+    </div>
+<input type="number" class="form-control" [(ngModel)]="vehicleage"/>
+</div>
+
+<button  class="btn btn-primary btn-lg" (click)="showplans(selectedpolicyno,vehicleage)">show plans</button>
+
+<p>thirdparty liability : {{thirdpartyliability}}</p>
+<p>Comprehensive :{{comprehensive}}</p>
+
+
+<div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">select the plan amount</span>
+    </div>
+
+<select class="form-select" aria-label="Default select example" [(ngModel)]="planAmount" >
+    <option selected  >select the plan amount  </option>
+     <option> {{thirdpartyliability}}</option>
+     <option> {{comprehensive}}</option>
+</select> 
+</div>
+
+<button class="btn btn-secondary btn-lg" (click)="renewPolicy(planAmount,selectedpolicyno)">Renew policy</button>
+
+</div>
