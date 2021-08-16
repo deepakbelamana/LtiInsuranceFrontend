@@ -3,6 +3,7 @@ import { JsonpClientBackend } from '@angular/common/http';
 import { ThrowStmt } from '@angular/compiler';
 import { getInterpolationArgsLength } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ServerService } from '../server.service';
 
 @Component({
@@ -13,7 +14,8 @@ import { ServerService } from '../server.service';
 
 export class RenewpolicyComponent implements OnInit {
 
-  id:any=102;
+  id:any;
+  idnew:number=0;
   userdata:any;
   selectedpolicyno:any;
   vehicleage:any;
@@ -29,12 +31,23 @@ export class RenewpolicyComponent implements OnInit {
   planAmount:any;
   renewed:boolean=false;
   object:any;
-  constructor(private server:ServerService) { }
+  constructor(private server:ServerService,private route:ActivatedRoute, private router:Router) { }
 
  
   ngOnInit(): void {
      
-      this.server.getpolicydetails(this.id).subscribe((data)=>
+    this.route.params
+    .subscribe(
+      (params: Params) => {
+        this.id = +params['id'];
+       this.idnew=+this.id;
+
+        console.log(this.id);
+        console.log(this.idnew)
+      }
+    );
+
+      this.server.getpolicydetails(this.idnew).subscribe((data)=>
       {
             this.userdata=data;
             console.log(this.userdata);

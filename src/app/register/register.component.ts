@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
 import { User } from '../user';
 
@@ -13,7 +14,7 @@ export class RegisterComponent implements OnInit {
   user:User;
   id:number=0;
 
-  constructor(private loginService:LoginService) { 
+  constructor(private loginService:LoginService, private router:Router) { 
     this.user=new User();
   }
 
@@ -40,8 +41,12 @@ export class RegisterComponent implements OnInit {
       (data)=>{
         console.log("return value from rest"+data);
       }
+      
+
     )
-    
+    alert("Registered Successfully...!");
+
+    this.router.navigate(['login/'])
   }
 }
 

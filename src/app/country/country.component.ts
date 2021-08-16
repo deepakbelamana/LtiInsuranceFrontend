@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CountryService } from '../country.service';
 
 @Component({
@@ -12,18 +13,30 @@ export class CountryComponent implements OnInit {
   cont:any;
   country:any;
   countryto:any;
-
+  id:any;
+  idnew:number=0;
   plan=["Bronze","Silver","Gold"];
   days:number=0;
   p1:string="";
   price:any;
   
-  constructor(private tService:CountryService) {
+  constructor(private tService:CountryService, private router:Router,private route:ActivatedRoute) {
     
     
     }
   
   ngOnInit(): void {
+    
+    this.route.params
+    .subscribe(
+      (params: Params) => {
+        this.id = +params['id'];
+       this.idnew=+this.id;
+
+        console.log(this.id);
+        console.log(this.idnew)
+      }
+    );
     this.tService.getAllCountry().subscribe(
       (data)=>
       {
@@ -53,19 +66,9 @@ export class CountryComponent implements OnInit {
     )
   }
 
+  gotohome()
+  {
+    this.router.navigate(['Home/'+this.idnew]);
+  }
   
-/*
-  findCont()
-  {
-
-    alert(this.country);
-  }
-
-  findCont2()
-  {
-
-    alert(this.countryto);
-  }
-  */
-
 }

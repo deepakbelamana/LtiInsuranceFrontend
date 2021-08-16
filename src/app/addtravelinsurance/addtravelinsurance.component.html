@@ -1,0 +1,40 @@
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <div class="card">
+                    <form class="form-card" #myForm="ngForm" (ngSubmit)="saveData()">
+                        <div class="row justify-content-between text-center">
+                            <div class="form-group col-sm-8 flex-column d-flex">
+                                <label for="agencyname">Agency Name</label>
+                                <input type="text" name="agencyname" [(ngModel)]="travelinsur.agencyname" required placeholder="Enter Agency Name">
+                                
+                              </div>
+                        </div>
+                        <div class="row justify-content-between text-center">
+                            <div class="form-group col-sm-8 flex-column d-flex">
+                                <label for="membercount">Number of travellers</label>
+                                <input type="number" name="membercount" [(ngModel)]="travelinsur.membercount" required placeholder="Enter Number of Travellers">
+                                
+                              </div>
+                        </div>
+                        <div class="row justify-content-between text-center">
+                            <div class="form-group col-sm-8 flex-column d-flex">
+                                <label for="destination">Destination</label>
+                                <select class="form-control" name="destination" [(ngModel)]="travelinsur.destination" required placeholder="Select Destination">
+                                    <option disabled>Select Destination</option>
+                                    <option *ngFor="let c of destinatns" value="{{c}}">{{c}}</option>
+                                </select>
+                              </div>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="form-group">
+                                <input type="submit" value="Select Plans" [disabled]="!myForm.valid" class="btn-block btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>

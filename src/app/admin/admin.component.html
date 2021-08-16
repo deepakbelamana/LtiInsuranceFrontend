@@ -1,0 +1,134 @@
+<p>admin works!</p>
+<div class="admintable">
+<div>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Claim ID</th>
+        <th scope="col">Type</th>
+        <th scope="col">Ticket raised date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Ticket resolved date</th>
+        <th scope="col">Policy No</th>
+        <th scope="col">Reason</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of cm">
+            <td>{{c.claimid}}</td>
+            <td>{{c.type}}</td>
+            <td>{{c.ticketdate}}</td>
+            <td>{{c.status}}</td>
+            <td>{{c.ticketresolveddate}}</td>
+            <td>{{c.policyno}}</td>
+            <td>{{c.reason}}</td>
+            <td>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal"  data-target="#exampleModal">
+                    Action
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Update Status</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                            <div class="modal-body">
+                                <div>
+                                    <form #myForm="ngForm" (ngSubmit)="savedata2()">
+                                        <div class="form-group">
+                                        <label for="claimid">Claim ID</label>
+                                        <input  type="text" class="form-control"  name="claimid" [(ngModel)]="stat.claimid" required >
+                                        <button type="button" class="btn btn-primary" (click)="saveData()">Set</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status">Status</label>
+                                            <input  type="text" class="form-control" name="status" [(ngModel)]="stat.status" required >
+                                        </div>
+                                    
+                                        <button type="submit" class="btn btn-primary" value="Claim" [disabled]="!myForm.valid">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button class="btn btn-success" value="Aprrove" (click)="saveData(c)">Approve</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Claim ID</th>
+            <th scope="col">Type</th>
+            <th scope="col">Ticket raised date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ticket resolved date</th>
+            <th scope="col">Policy No</th>
+            <th scope="col">Reason</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of vm">
+                <td>{{c.claimid}}</td>
+                <td>{{c.type}}</td>
+                <td>{{c.ticketdate}}</td>
+                <td>{{c.status}}</td>
+                <td>{{c.ticketresolveddate}}</td>
+                <td>{{c.policyno}}</td>
+                <td>{{c.reason}}</td>
+                <td>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                    Action
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Update Status</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                            <div class="modal-body">
+                                <div>
+                                    <form #myForm1="ngForm" (ngSubmit)="saveVehicleData2()">
+                                        <div class="form-group">
+                                        <label for="claimid">Claim ID</label>
+                                        <input  type="text" class="form-control"  name="claimid" [(ngModel)]="cid" required >
+                                        <button type="button" class="btn btn-primary" (click)="saveVehicleData()">Set</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status">Status</label>
+                                            <input  type="text" class="form-control" name="status" [(ngModel)]="statv.status" required >
+                                        </div>
+                                    
+                                        <button type="submit" class="btn btn-primary" value="Vehicleclaim" [disabled]="!myForm1.valid">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button class="btn btn-success" value="Aprrove" (click)="saveData(c)">Approve</button> -->
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

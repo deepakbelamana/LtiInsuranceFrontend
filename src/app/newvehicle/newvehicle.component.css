@@ -1,0 +1,11 @@
+.shadow-s,.p-3,.mb-5,.bg-white,.rounded
+{
+    margin:20px;
+}
+.btn,.btn-secondary
+{
+    margin:10px;
+    position:relative;
+    display:inline-block;
+    
+}

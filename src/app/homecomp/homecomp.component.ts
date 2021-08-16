@@ -9,11 +9,10 @@ import { Params } from '@angular/router';
 })
 export class HomecompComponent implements OnInit {
 
-  showbutton:boolean=true;
-  showloginbutton:boolean=false;
+
   id:any;
   idnew:number=0;
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -28,8 +27,37 @@ export class HomecompComponent implements OnInit {
         }
       );
   }
-done(){
-  this.showbutton=!this.showbutton;
-  this.showloginbutton=!this.showloginbutton;
+
+
+gotoNewVehicle()
+{
+  console.log(this.idnew);
+  this.router.navigate(['newvehicle/'+this.idnew]);
+
+}
+gotoClaims()
+{
+  this.router.navigate(['showclaim/'+this.idnew]);
+}
+
+renewpolicy()
+{
+  this.router.navigate(['renewVehicle/'+this.idnew])
+}
+
+gototravelinsurance()
+{
+  this.router.navigate(['addtravel/'+this.idnew])
+}
+calculatepremium()
+{
+  this.router.navigate(['selectvehicle/'+this.idnew])
+}
+calculatetravelpremium(){
+  this.router.navigate(['travel/'+this.idnew])
+}
+gotolandingpage()
+{
+  this.router.navigate([''])
 }
 }

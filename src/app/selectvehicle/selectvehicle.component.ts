@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { ServerService } from '../server.service';
 
@@ -9,7 +10,6 @@ import { ServerService } from '../server.service';
 })
 export class SelectvehicleComponent implements OnInit {
   
-  constructor(private server:ServerService) { }
   maker:any;
   model:any;
   makername:any;
@@ -19,7 +19,21 @@ export class SelectvehicleComponent implements OnInit {
   tpl:any;
   comp:any;
   divdisplay:boolean=false;
+  id:any;
+  idnew:number=0;
+  constructor(private server:ServerService, private router:Router,private route:ActivatedRoute) { }
+
   ngOnInit(): void {
+    this.route.params
+    .subscribe(
+      (params: Params) => {
+        this.id = +params['id'];
+       this.idnew=+this.id;
+
+        console.log(this.id);
+        console.log(this.idnew)
+      }
+    );
   }
   
   gettwowheeler()
@@ -70,5 +84,8 @@ export class SelectvehicleComponent implements OnInit {
            }
          )
         
+  }
+  gotohome(){
+    this.router.navigate(['Home/'+this.idnew]);
   }
 }

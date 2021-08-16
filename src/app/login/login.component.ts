@@ -34,11 +34,18 @@ export class LoginComponent implements OnInit {
       {
         console.log(data);
         this.result=data;
-
+        if(this.result==-1)
+        {
+          alert('Incorrect Email Id Or Password');
+        }
+        else
+        {
+        this.router.navigate(['Home/'+this.result]);
+        }
       }
     );
-
-    this.router.navigate(['Home/'+101]);
+   
+    
   }
 }
 

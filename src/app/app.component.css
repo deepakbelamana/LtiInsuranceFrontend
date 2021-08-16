@@ -1,4 +1,4 @@
-.container
+/* .container
 {
     padding: 20px;
     margin: 20px;
@@ -18,19 +18,25 @@
 body{
    
     text-align: center;
-    background-color: rgb(253, 252, 245);
+    background-color: rgb(233, 219, 111);
     padding: 30px;
     margin: 50px;
-    background-image: url("https://www.plindia.com/blog/wp-content/uploads/2018/11/08.-Did-You-Know-This-Is-Why-Car-Insurance-Prices-Differ.jpg");
+    /* background-image: url("https://www.plindia.com/blog/wp-content/uploads/2018/11/08.-Did-You-Know-This-Is-Why-Car-Insurance-Prices-Differ.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size:cover;
-    
-}
+    background-size:cover; */
+ /*   
+}*/
+/*
 h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
     color:rgb(35, 49, 255);
     text-shadow:2px 2px 8px rgb(161, 153, 209);
     padding:20px;
     
+} */
+
+.LTILogo{
+    position:relative;
+    right:0px;
 }

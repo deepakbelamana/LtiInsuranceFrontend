@@ -1,0 +1,21 @@
+<h3>New Vehicle Claim</h3>
+<div>
+    <form #myForm="ngForm" (ngSubmit)="saveVehicleData()">
+        <div class="form-group">
+          <label for="claimid">Claim ID</label>
+          <input  type="text" class="form-control" name="claimid" [(ngModel)]="vehicleclaim.claimid" required >
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason</label>
+            <input  type="text" class="form-control" name="reason" [(ngModel)]="vehicleclaim.reason" required >
+          </div>
+        <div>
+        <label for="policyno">Policy No</label>
+        <select class="custom-select" name="policyno" [(ngModel)]="vehicleclaim.policyno">
+            <option selected>select</option>
+            <option *ngFor="let c of vehiclepolicy" [value]="c.policyno" >{{c.policyno}}</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" value="Claim" [disabled]="!myForm.valid">Submit</button>
+      </form>
+</div>

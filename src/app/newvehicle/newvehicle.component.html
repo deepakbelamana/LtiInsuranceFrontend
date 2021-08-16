@@ -1,0 +1,206 @@
+<!-- <div class="shadow-sm p-3 mb-5 bg-white rounded">
+    <form #myForm="ngForm" (ngSubmit)="saveData()">
+
+        <table style="text-align: center; margin-left: 300px;" >
+                <tr>
+                    <td></td>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+                 <td><label for="registrationno">Vehicle Registration number</label> </td>  
+                    <td><input  type="text" name="registrationno" placeholder="Vehicle Registration Number" aria-label="Vehicle Registration Number" [(ngModel)]="vehi.registrationno" [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1"></td>       
+                    </div>
+                </tr>
+
+                <tr>   
+              
+                  <td>
+                <button type="button" class="btn btn-secondary" (click)="gettwowheeler()">Two wheeler</button>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                <button type="button" class="btn btn-secondary" (click)="getfourwheeler()">FourWheeler</button>
+                 </td>
+              </tr>
+
+               <tr>
+                <td></td>
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"></span>
+             <td><label for="maker">Vehicle Manufacturer</label> </td>  
+              <td><input  type="text" name="maker" placeholder="Vehicle Manufacturer" aria-label="Vehicle Manufacturer" [(ngModel)]="vehi.maker"  [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1"></td>     
+               
+              <td><select  [(ngModel)]="vehi.maker" name="vehi.maker" (change)="getmodel()"> 
+                    <option disabled selected value> -- select the type-- </option>
+                   <option *ngFor="let makers of maker">{{makers}}</option>
+              
+                  </select></td> 
+                
+            </div> 
+            </tr>
+            <tr>
+                <td></td>
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"></span>
+            <td><label for="model">Vehicle Model</label> </td>   
+                <td><input  type="text" name="model" placeholder="Vehicle Model" aria-label="Vehicle Model" [(ngModel)]="vehi.model"  [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1"></td>   
+                <td><select [(ngModel)]="vehi.model" name="model">  
+                    <option *ngFor="let models of model">{{models}}</option>
+                 </select></td>   </div> 
+            </tr>
+                <tr>
+                    <td></td>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+                <td><label for="registrationno">Vehicle Chassis number</label> </td>  
+                    <td><input  type="text" name="chassisno" placeholder="Vehicle Chassis Number" aria-label="Vehicle Chasis Number" [(ngModel)]="vehi.chassisno" [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1"></td>       
+                    </div>
+                </tr>
+                 <tr> 
+                    <td></td>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+                 <td><label for="vehicleage">Vehicle Age</label> </td>  
+                     <td><input type="number" placeholder="Vehicle Age" aria-label="Vehicle Age" [(ngModel)]="vehicleage" [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1" /></td>
+                     </div>
+
+                    <tr>
+                    <div>
+                    <button type="button" class="btn btn-secondary" (click)="getpremium(vehicleage,vehi.maker,vehi.model)">Show Plans</button>
+                    </div>
+                    </tr>
+
+                    <div class="input-group mb-3" *ngIf="plans">
+                        <p>Third-Party Liable : {{tpl}}</p>
+                        <p>Comprehensive : {{comp}}</p>
+                    </div>
+
+
+                   <tr>
+                       <td></td>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>    
+                    <td><input type="text" placeholder="Enter the amt based on plan" aria-label="Enter the amt based on plan" [(ngModel)]="vehi.amount" [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1" /></td>
+                     </div>
+                    </tr>
+
+                <tr>
+                    <td></td>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+               <td><label for="engineno">Vehicle Engine number</label> </td>  
+                    <td><input  type="text" name="engineno" placeholder="Vehicle Engine Number" aria-label="Vehicle Engine Number" [(ngModel)]="vehi.engineno" [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1"></td>       
+                   </div>
+                </tr>
+                <tr>
+                    <td></td>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+               <td><label for="userid">UserID</label> </td>   
+                    <td><input  type="text" name="userid" placeholder="UserID" aria-label="UserID" [(ngModel)]="vehi.userid" [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1"></td>       
+                    </div>
+                </tr>
+               
+                <tr>
+                    
+                    <td><input class="btn btn-dark" style="align-self: center;" type="submit" value="Submit" [disabled]="!myForm.valid"></td>    
+                
+                </tr>
+              
+        </table>
+
+      
+    </form>
+ <button type="text" routerLink="/buyvehicle"></button>
+</div> -->
+
+
+
+
+    <form #myForm="ngForm" (ngSubmit)="saveData()">
+
+        <div class="position-absolute top-50 start-50 translate-middle" style="border-style:groove;">
+            <div style="margin-left:20px; margin-top:15px">
+        <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Enter Details Here </h2>
+        <br>
+        <div class="mb-3" style="width: 300px;">
+            <label for="exampleFormControlInput1" class="form-label">Vehicle Registration Number</label>
+                
+                    <!--<td class="text-center"></td>
+                    <div class="input-group mb-3 ">
+                    <span class="input-group-text" id="basic-addon1"></span>
+               <label for="registrationno">Vehicle Registration number</label> -->
+                    
+            <input id="exampleFormControlInput1" type="text" name="registrationno"  [(ngModel)]="vehi.registrationno" [ngModelOptions]="{standalone: true}" required >      
+                    </div>
+                 
+                    <div class="mb-3" style="width: 300px;">
+                        <label for="exampleFormControlInput1" class="form-label">Select the Type of Vehicle</label><br>
+                        <input class="btn btn-secondary" type="button" value="TwoWheeler" (click)="gettwowheeler()"/>
+                        <input class="btn btn-secondary" type="button" value="FourWheeler" (click)="getfourwheeler()"/>
+                   </div>
+
+                   <div class="mb-3" style="width: 300px;">
+                    <label for="exampleFormControlInput1" class="form-label">Type of Manufacturer</label>
+           <!--    <td><label for="maker">Vehicle Manufacturer</label> </td>  -->   
+                <td><select  [(ngModel)]="vehi.maker" name="vehi.maker" (change)="getmodel()"> 
+                    <option disabled selected value> -- select the type-- </option>
+                   <option *ngFor="let makers of maker">{{makers}}</option>
+                  </select></td> </div> 
+
+                  <div class="mb-3" style="width: 300px;">
+                    <label for="exampleFormControlInput1" class="form-label">Type of Model</label>
+            <!--    <td><label for="model">Vehicle Model</label> </td>   --> 
+                <td><select [(ngModel)]="vehi.model" name="model">  
+                    <option disabled selected value> -- select the type-- </option>
+                    <option *ngFor="let models of model">{{models}}</option>
+                 </select></td>   </div> 
+  
+                 <div class="mb-3" style="width: 300px;">
+                 <label for="exampleFormControlInput1" class="form-label">Vehicle Chassis Number</label>
+                <!--    <td><label for="registrationno">Vehicle Chassis number</label> </td>  --> 
+                <input  type="text" name="chassisno" [(ngModel)]="vehi.chassisno" [ngModelOptions]="{standalone: true}">       
+                    </div>
+               
+                    <div class="mb-3" style="width: 300px;">
+                    <label for="exampleFormControlInput1" class="form-label">Vehicle Age</label>
+                    <!-- <td><label for="vehicleage">Vehicle Age</label> </td>  -->
+                     <td><input type="number" [(ngModel)]="vehicleage" [ngModelOptions]="{standalone: true}" required aria-describedby="basic-addon1" /></td>
+                    </div>
+
+                    
+                    <button type="button" class="btn btn-secondary" (click)="getpremium(vehicleage,vehi.maker,vehi.model)">Show Plans</button>
+
+                    <div class="mb-3" style="width: 300px;" *ngIf="plans">
+                        <p>Third-Party Liable : {{tpl}}</p>
+                        <p>Comprehensive : {{comp}}</p>
+                    </div>
+
+
+                    <div class="mb-3" style="width: 300px;">
+                        <label for="exampleFormControlInput1" class="form-label">Enter Amount based on Plan</label>  
+                    <td><input type="text" [(ngModel)]="vehi.amount" [ngModelOptions]="{standalone: true}" /></td>
+                     </div>
+
+                     <div class="mb-3" style="width: 300px;">
+                        <label for="exampleFormControlInput1" class="form-label">Vehicle Engine Number</label>
+                 <!--   <td><label for="engineno">Vehicle Engine number</label> </td>   -->
+                    <td><input  type="text" name="engineno" [(ngModel)]="vehi.engineno" [ngModelOptions]="{standalone: true}" ></td>       
+                   </div>
+                
+                   <div class="mb-3" style="width: 300px;">
+                    <label for="exampleFormControlInput1" class="form-label">User ID</label>
+                <!--   <td><label for="userid">UserID</label> </td>   --> 
+                    <td><input  type="text" name="userid" [(ngModel)]="vehi.userid" [ngModelOptions]="{standalone: true}" ></td>       
+                    </div>
+
+               
+                <tr>
+                    
+                    <td><input class="btn btn-dark" type="submit" value="Submit" [disabled]="!myForm.valid"></td>    
+                
+                </tr>
+                </div>
+    </div>
+      
+    </form>

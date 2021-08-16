@@ -1,14 +1,73 @@
-<p>Home Component works!</p>
+
+
+
+<img src="assets\LTI.jpeg" width="150px" alt="Image not found" class="LTILogo"><div style="font-family: 'Times New Roman', Times, serif;display:inline;padding:10px;left:30px"><h2 style="position: absolute;right: 1200px;top: 50px;">LTI Insurance</h2> </div>
+<div style="text-align:left;"><br>
+<h2 style="position: absolute;right:1250px ;">Why Insurance</h2>   
+<p style="width:600px;position: absolute;top: 230px;right: 800px;"> 
+    Buying insurance is important as it ensures that you are financially secure to face any type of problem in life, and this is why insurance is a very important part of financial planning.
+    A general insurance company offers insurance policies to secure travel, motor vehicle, and home.
+    General insurance,is the group of non-life insurance policies that provide insurance cover for motor vehicles, houses,and travel.
+    These policies have to be renewed according to the tenure and these have a particular sum insured and can be claimed accordingly.
+</p>
+<br><br>
+<img style="position: absolute;top:480px;left: 110px;" src="assets\car.jpeg" width="150px" alt="Image not found"><br><br><br>
+<div style="position: absolute;top:560px;left: 110px;"><h4>Vehicle Insurance</h4>
+<p style="width: 300px;">
+    Car insurance is essential financial protection for you and your car.
+    When you cause damage or injure someone in an accident, car insurance covers the costs.
+    It can also reimburse you if your car is damaged or stolen.
+</p>
+</div>
+<img style="position: absolute;top: 480px;right: 700px;" src="assets\travel.jpeg" width="150px" alt="Image not Found"><br><br><br>
+<div style="position: absolute;top:560px;right: 560px;"><h4>Travel Insurance</h4>
+<p style="width: 300px;">
+    An unexpected medical emergency, a cancelled fligh can bring the vacation you've been dreaming about to a halt.
+    Travel insurance can help turn things around by covering costs incurred due to emergency medical care, the cancellation or interruption of your trip, and more.
+</p>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr>
+<img style="position: absolute;right: 1000px;" src="assets\LTI.jpeg" width="330px" alt="Image not Found">
+<div>
+    <h3 style="position: absolute;top: 830px;right: 750px;">About Us</h3>
+    <p style="width: 500px;position: absolute;right: 500px;top: 900px;">
+        LTI (NSE: LTI) is a global technology consulting and digital solutions Company helping more than 435 clients succeed in a converging world. With operations in 31 countries, we go the extra mile for our clients and accelerate their digital transformation with LTI’s Mosaic platform enabling their mobile, social, analytics, IoT and cloud journeys.
+    </p>
+</div>
+</div>
+
 
 <div style="text-align: center;">
+        <tr style="position: absolute;top: 0;right: 0;margin-top: 100px;">
+            <a style="margin-right:10px;" href="">Contact Us</a>
+            <a style="margin-right:10px;" href="">Help</a>
+            <a style="margin-right:10px;" href="">FAQ</a><br>
+            <hr>
+            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn btn-outline-primary btn-block" (click)="gotoNewVehicle()">Buy Vehicle Insurance</button>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="gototravelinsurance()">Buy Travel Insurance</button><br><br>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="calculatepremium()">Calculate Vehicle Premium</button>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="calculatetravelpremium()">Calculate Travel Premium</button><br><br>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="renewpolicy()">Renew Vehicle Insurance</button><br><br>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="gotoClaims()">Claims</button><br><br>
+            <button type="text" style="margin: 10px;" routerLink="/exit" class="btn btn-outline-primary btn-block" (click)="gotolandingpage()">Logout</button>
+            <hr>
+            <h4>Our Plans</h4>
+            <a style="margin-right:10px;" href="">BRONZE</a><br>
+            <a style="margin-right:10px;" href="">SILVER</a><br>
+            <a style="margin-right:10px;" href="">GOLD</a>
+
+        </tr>
+</div>
+
+<!-- <div style="text-align: center;">
         <tr style="position: absolute;top: 0;right: 0;margin-top: 120px;">
-            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn btn-outline-primary btn-block">Buy Vehicle Insurance</button>
+            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn btn-outline-primary btn-block"  (click)="gotoNewVehicle()">Buy Vehicle Insurance</button>
             <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Buy Travel Insurance</button><br>
             <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Calculate Vehicle Premium</button>
             <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Calculate Travel Premium</button><br>
             <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Renew Vehicle Insurance</button><br>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" >Claims</button><br>
+            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block"   (click)="gotoClaims()">Claims</button><br>
             <button type="text" style="margin: 10px;" routerLink="/exit" class="btn btn-outline-primary btn-block" *ngIf="showbutton" (click)="done()">Logout</button>
             <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" *ngIf="showloginbutton">Login Again</button>
         </tr>
-</div>
+</div> -->

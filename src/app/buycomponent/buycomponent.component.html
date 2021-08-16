@@ -1,0 +1,37 @@
+
+The Amount chosen based on plan is  :<h2>{{amount}}</h2>
+
+<form style="text-align: center;margin-left: 200px">
+<div class="form-group">
+
+    <div style="width:350px; font-size: 20px; font-family: 'Times New Roman', Times, serif;">
+
+    <tr>
+    <label for="formGroupExampleInput" class="form-label" for="name">Card Holder Name</label>
+    <input type="text" class="form-control" placeholder=" Enter your name on card" id="formGroupExampleInput"/><br>
+   </tr>
+   
+
+    <!-- <input type="text" placeholder="Enter type of card"><td></td>  -->
+    <tr>
+      <label for="formGroupExampleInput" class="form-label" for="name">Card Number</label>
+    <input type="text"  class="form-control" placeholder="Enter 12 Digit valid number" id="formGroupExampleInput" /><br>
+   </tr>
+
+   <tr>
+    <label for="formGroupExampleInput" class="form-label" for="name">CVV Number</label>
+    <input type="text"  class="form-control" placeholder="Enter 3 Digit cvv number" id="formGroupExampleInput"/><br>
+   </tr>
+
+   <tr>
+    <label for="formGroupExampleInput" class="form-label" for="name">Enter the validity</label><br>
+    <input type="date"  class="form-control" id="formGroupExampleInput" /><br>
+   </tr><br>
+
+   <!-- <button class="btn btn-dark" type="submit">PAY</button>  -->
+   <button class="btn btn-dark" type="text" (click)="success()">PAY</button>
+
+  </div>
+
+</div>
+</form>

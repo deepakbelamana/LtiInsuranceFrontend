@@ -1,0 +1,21 @@
+<h3>New Travel Claim</h3>
+<div>
+    <form #myForm="ngForm" (ngSubmit)="saveData()">
+        <div class="form-group">
+          <label for="claimid">Claim ID</label>
+          <input  type="text" class="form-control" name="claimid" [(ngModel)]="claims.claimid" required >
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason</label>
+            <input  type="text" class="form-control" name="type" [(ngModel)]="claims.reason" required >
+          </div>
+        <div>
+        <label for="policyno">Policy No</label>
+        <select class="custom-select" name="policyno" [(ngModel)]="claims.policyno">
+            <option selected>Open this select menu</option>
+            <option *ngFor="let c of traveluser" [value]="c.policyno" >{{c.policyno}}</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" value="Claim" [disabled]="!myForm.valid">Submit</button>
+      </form>
+</div>
