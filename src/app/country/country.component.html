@@ -4,8 +4,7 @@
     
     </style>
     <body>
-      
-        <button  class="btn btn-dark" (click)="gotohome()" style="margin-left: 100px;" >Home</button>
+      <img src="/assets/travel.jpeg" width="100%"/>
 <div class="position-absolute top-50 start-50 translate-middle">
     <div class="mb-3" style="width: 300px;">
         <label for="exampleFormControlInput1" class="form-label"><h5>Travel From</h5></label>
@@ -30,14 +29,15 @@
       </div>           
                
          <button  class="btn btn-dark" (click)="Calculate()" style="margin-left: 100px;" >Calculate</button>  
-            
-         <div class="mb-3" style="width: 180px;height:150px;margin:70px; border-style:groove; text-align: center;" class="bg-success p-2 text-dark bg-opacity-25">
+        
+         <div class="mb-3" style="width: 180px;height:150px;margin:70px; background-color: skyblue; border-style:groove; text-align: center;" >
             <label for="exampleFormControlInput1" class="form-label" for="days"><h5>Insurance Cost</h5></label>
             <p style="font-weight: bold;">{{p1}} Plan Cost: <br>{{price}}</p>      
           </div>
+          <button  class="btn btn-dark" (click)="gotohome()"  style="margin-left: 110px;">Home</button>  
         </div>
 
-        
+              
             
         
 </body>

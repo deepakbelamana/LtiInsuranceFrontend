@@ -40,5 +40,9 @@ export class SuccesscomponentComponent implements OnInit {
       }
     )
   }
+  gotohome()
+  {
+   this.router.navigate(['Home/'+ this.vehi.userid]);
+  }
 
 }

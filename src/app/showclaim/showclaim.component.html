@@ -1,14 +1,15 @@
-<h3>Claim History</h3>
-<button (click)="gotovehicleclaim()">vehicle insurance claim</button>
-<button  (click)="gototravelclaim()" >travel insurance claim</button>
+<h3 style="margin-left: 620px;">Claim History</h3>
+<div style="margin-left: 500px;">
+<button (click)="gotovehicleclaim()" class="btn btn-outline-dark" style="margin:10px">vehicle insurance claim</button>
+<button  (click)="gototravelclaim()" class="btn btn-outline-dark" >travel insurance claim</button>
+<button  (click)="gotohome()" style="margin:10px" class="btn btn-outline-dark" >home</button>
+</div>
 <table class="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Claim ID</th>
         <th scope="col">Type</th>
-        <th scope="col">Ticket raised date</th>
         <th scope="col">Status</th>
-        <th scope="col">Ticket resolved date</th>
         <th scope="col">Policy No</th>
         <th scope="col">Reason</th>
       </tr>
@@ -17,19 +18,15 @@
         <tr *ngFor="let c of claims">
             <td>{{c.claimid}}</td>
             <td>{{c.type}}</td>
-            <td>{{c.ticketdate}}</td>
             <td>{{c.status}}</td>
-            <td>{{c.ticketresolveddate}}</td>
             <td>{{c.policyno}}</td>
             <td>{{c.reason}}</td>
         </tr>
 
         <tr *ngFor="let c of vehicleclaim">
             <td>{{c.claimid}}</td>
-            <td>{{c.type}}</td>
-            <td>{{c.ticketdate}}</td>
+            <td>{{c.type}}</td>     
             <td>{{c.status}}</td>
-            <td>{{c.ticketresolveddate}}</td>
             <td>{{c.policyno}}</td>
             <td>{{c.reason}}</td>
         </tr>

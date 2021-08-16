@@ -1,9 +1,13 @@
 
 
+<div class="LTILogo">
+<img src="assets\LTI.jpeg" width="100px" alt="Image not found" style="display:inline-block;" >
+<div style="font-family: 'Times New Roman', Times, serif;"><h1 style="right: 0px;margin-top: 0px;margin-left: 550px;">LTI Insurance</h1> </div>
+</div>
+<div style="text-align:left;">
+    <hr>   
+<h2 style="position:relative;left:50px; ">Why Insurance</h2> 
 
-<img src="assets\LTI.jpeg" width="150px" alt="Image not found" class="LTILogo"><div style="font-family: 'Times New Roman', Times, serif;display:inline;padding:10px;left:30px"><h2 style="position: absolute;right: 1200px;top: 50px;">LTI Insurance</h2> </div>
-<div style="text-align:left;"><br>
-<h2 style="position: absolute;right:1250px ;">Why Insurance</h2>   
 <p style="width:600px;position: absolute;top: 230px;right: 800px;"> 
     Buying insurance is important as it ensures that you are financially secure to face any type of problem in life, and this is why insurance is a very important part of financial planning.
     A general insurance company offers insurance policies to secure travel, motor vehicle, and home.
@@ -38,36 +42,32 @@
 
 
 <div style="text-align: center;">
-        <tr style="position: absolute;top: 0;right: 0;margin-top: 100px;">
-            <a style="margin-right:10px;" href="">Contact Us</a>
-            <a style="margin-right:10px;" href="">Help</a>
-            <a style="margin-right:10px;" href="">FAQ</a><br>
+        <tr style="position: absolute;top: 0px;right: 120px;margin-top: 30px;">
+            <a style="margin-right:10px;" >Contact Us</a>
+            <a style="margin-right:10px;" >Help</a>
+            <a style="margin-right:10px;">FAQ</a>
             <hr>
-            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn btn-outline-primary btn-block" (click)="gotoNewVehicle()">Buy Vehicle Insurance</button>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="gototravelinsurance()">Buy Travel Insurance</button><br><br>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="calculatepremium()">Calculate Vehicle Premium</button>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="calculatetravelpremium()">Calculate Travel Premium</button><br><br>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="renewpolicy()">Renew Vehicle Insurance</button><br><br>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" (click)="gotoClaims()">Claims</button><br><br>
-            <button type="text" style="margin: 10px;" routerLink="/exit" class="btn btn-outline-primary btn-block" (click)="gotolandingpage()">Logout</button>
+            <button type="text" style="margin: 10px;" routerLink="/exit" class=" btn btn-danger btn-block" (click)="gotolandingpage()">Logout</button><br>
+            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn btn-primary btn-block" (click)="gotoNewVehicle()">Buy Vehicle Insurance</button>
+            <button type="button" style="margin: 10px;" class="btn btn-primary btn-block" (click)="gototravelinsurance()">Buy Travel Insurance</button><br>
+            <button type="button" style="margin: 10px;" class="btn btn-primary btn-block " (click)="calculatepremium()">Calculate Vehicle Premium</button>
+            <button type="button" style="margin: 10px;" class=" btn btn-primary btn-block" (click)="calculatetravelpremium()">Calculate Travel Premium</button><br><br>
+            <button type="button" style="margin: 10px;" class=" btn btn-primary btn-block" (click)="renewpolicy()">Renew Vehicle Insurance</button><br><br>
+            <button type="button" style="margin: 10px;" class=" btn btn-success btn-block" (click)="gotoClaims()">Claims</button><br><br>          
             <hr>
-            <h4>Our Plans</h4>
-            <a style="margin-right:10px;" href="">BRONZE</a><br>
-            <a style="margin-right:10px;" href="">SILVER</a><br>
-            <a style="margin-right:10px;" href="">GOLD</a>
-
+          
         </tr>
 </div>
 
 <!-- <div style="text-align: center;">
         <tr style="position: absolute;top: 0;right: 0;margin-top: 120px;">
-            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn btn-outline-primary btn-block"  (click)="gotoNewVehicle()">Buy Vehicle Insurance</button>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Buy Travel Insurance</button><br>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Calculate Vehicle Premium</button>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Calculate Travel Premium</button><br>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block">Renew Vehicle Insurance</button><br>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block"   (click)="gotoClaims()">Claims</button><br>
-            <button type="text" style="margin: 10px;" routerLink="/exit" class="btn btn-outline-primary btn-block" *ngIf="showbutton" (click)="done()">Logout</button>
-            <button type="button" style="margin: 10px;" class="btn btn-outline-primary btn-block" *ngIf="showloginbutton">Login Again</button>
+            <button type="button" style="margin: 10px;" routerLink="/addvehicle" class="btn-primary btn-block"  (click)="gotoNewVehicle()">Buy Vehicle Insurance</button>
+            <button type="button" style="margin: 10px;" class="btn-primary btn-block">Buy Travel Insurance</button><br>
+            <button type="button" style="margin: 10px;" class="btn-primary btn-block">Calculate Vehicle Premium</button>
+            <button type="button" style="margin: 10px;" class="btn-primary btn-block">Calculate Travel Premium</button><br>
+            <button type="button" style="margin: 10px;" class="btn-primary btn-block">Renew Vehicle Insurance</button><br>
+            <button type="button" style="margin: 10px;" class="btn-primary btn-block"   (click)="gotoClaims()">Claims</button><br>
+            <button type="text" style="margin: 10px;" routerLink="/exit" class="btn-primary btn-block" *ngIf="showbutton" (click)="done()">Logout</button>
+            <button type="button" style="margin: 10px;" class="btn-primary btn-block" *ngIf="showloginbutton">Login Again</button>
         </tr>
 </div> -->

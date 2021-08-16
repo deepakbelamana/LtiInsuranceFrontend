@@ -1,6 +1,9 @@
+<img src="/assets/login.jpeg" width="100%"/>
 
+<!-- <div style="margin-left: 400px; margin-top:80px;"> -->
 <form #myForm="ngForm" (ngSubmit)="saveData()">
-    <div class="position-absolute top-50 start-50 translate-middle" style="border-style:groove;">
+
+    <div class="position-absolute top-50 start-50 translate-middle" style="border-style:groove;padding:25px;border-radius:5px">
         <div style="margin-left:20px; margin-top:15px">
     <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Register Here </h2>
     <br>
@@ -28,7 +31,7 @@
     
       <div class="mb-3" style="width: 300px;">
         <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Contact No &nbsp;&nbsp;&nbsp;</h6></label>
-        <input type="text"  name="contactno" [(ngModel)]="user.contactno" required  id="exampleFormControlInput1" placeholder="Enter 10 digit Number">
+        <input type="text"  name="contactno" [(ngModel)]="user.contactno" required maxlength="10" minlength="10" id="exampleFormControlInput1" placeholder="Enter 10 digit Number">
       </div>
     
       <div class="mb-3" style="width: 300px;">
@@ -38,11 +41,12 @@
     
       <div class="mb-3" style="width: 300px;">
         <label for="exampleFormControlInput1" class="form-label" for="days"><h6>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h6></label>
-        <input type="text"  name="password" [(ngModel)]="user.password" required  id="exampleFormControlInput1" placeholder="Enter Password">
+        <input type="text"  name="password" [(ngModel)]="user.password" required minlength="5" id="exampleFormControlInput1" placeholder="Enter Password">
       </div>
     
-      <button  class="btn btn-dark"  style="margin-left: 100px;" >Register</button>  
+      <button  class="btn btn-dark"  style="margin-left: 100px;" [disabled]="!myForm.valid" >Register</button>  
       
        </div>
        </div>
        </form>
+

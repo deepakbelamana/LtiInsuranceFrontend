@@ -32,7 +32,11 @@ export class TravelInsuranceService {
   {
     return this.httpClient.get("http://localhost:9887/traveluserrest/api/highest" , {responseType: 'text'});
   }
-
+  
+  getuserid(policyno:any)
+  {
+    return this.httpClient.get("http://localhost:9887/traveluserrest/api/userid/"+policyno,{responseType: 'text'})
+  }
   gethighestid()
   {
     return this.httpClient.get(this.baseUrl+"/highestid");

@@ -116,13 +116,12 @@
 
 
 
+ <img src="/assets/login.jpeg" width="100%"/>
 
-    <form #myForm="ngForm" (ngSubmit)="saveData()">
-
-        <div class="position-absolute top-50 start-50 translate-middle" style="border-style:groove;">
+    <form #myForm="ngForm" (ngSubmit)="saveData()">    
+        <div class="position-absolute top-50 start-50 translate-middle" style="border-style:groove; margin-top: 50px;width:500px;">
             <div style="margin-left:20px; margin-top:15px">
         <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Enter Details Here </h2>
-        <br>
         <div class="mb-3" style="width: 300px;">
             <label for="exampleFormControlInput1" class="form-label">Vehicle Registration Number</label>
                 
@@ -179,7 +178,12 @@
 
                     <div class="mb-3" style="width: 300px;">
                         <label for="exampleFormControlInput1" class="form-label">Enter Amount based on Plan</label>  
-                    <td><input type="text" [(ngModel)]="vehi.amount" [ngModelOptions]="{standalone: true}" /></td>
+                    <td><select [(ngModel)]="vehi.amount" [ngModelOptions]="{standalone: true}" >
+                        <option value="{{tpl}}"> {{tpl}}</option>
+                        <option value="{{comp}}">{{comp}}</option>
+                    
+                        </select>
+                    </td>
                      </div>
 
                      <div class="mb-3" style="width: 300px;">
@@ -188,11 +192,11 @@
                     <td><input  type="text" name="engineno" [(ngModel)]="vehi.engineno" [ngModelOptions]="{standalone: true}" ></td>       
                    </div>
                 
-                   <div class="mb-3" style="width: 300px;">
+                   <!-- <div class="mb-3" style="width: 300px;">
                     <label for="exampleFormControlInput1" class="form-label">User ID</label>
-                <!--   <td><label for="userid">UserID</label> </td>   --> 
+                <td><label for="userid">UserID</label> </td>   
                     <td><input  type="text" name="userid" [(ngModel)]="vehi.userid" [ngModelOptions]="{standalone: true}" ></td>       
-                    </div>
+                    </div> -->
 
                
                 <tr>

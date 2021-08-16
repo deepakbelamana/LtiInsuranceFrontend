@@ -48,5 +48,8 @@ export class ShowclaimComponent implements OnInit {
   {
     this.router.navigate(["addtravelclaim/"+this.idnew]);
   }
-
+  gotohome()
+  {
+    this.router.navigate(["Home/"+this.idnew]);
+  }
 }

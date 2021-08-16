@@ -1,3 +1,14 @@
 a{
     padding:10px;
 }
+
+ a:hover{
+    text-decoration: none;
+ }
+ .card {
+    padding: 20px;
+    margin-top: 60px;  
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+  }
+  

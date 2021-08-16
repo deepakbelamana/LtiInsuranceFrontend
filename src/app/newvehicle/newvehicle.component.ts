@@ -30,7 +30,7 @@ export class NewvehicleComponent implements OnInit {
   plans:boolean=false;
   id:any;
   idnew:number=0;
-  
+  intamount:any;
   constructor(private vehicleInsuranceService:VehicleInsuranceService,private router:Router,private route:ActivatedRoute) {
     this.vehi=new VehicleInsurance();
     
@@ -126,8 +126,8 @@ export class NewvehicleComponent implements OnInit {
            {
              console.log(data);
              this.premiumlist=data;
-             this.comp=this.premiumlist[0];
-             this.tpl=this.premiumlist[1];
+             this.comp=Math.floor(this.premiumlist[0]);
+             this.tpl=Math.floor(this.premiumlist[1]);
            }
          )
         
@@ -139,7 +139,7 @@ export class NewvehicleComponent implements OnInit {
          this.vehi.valid=1;
         this.vehi.userid=this.idnew;
         console.log(this.vehi.userid);
-        
+         console.log(this.vehi.amount);
          this.vehicleInsuranceService.addNewVehicle(this.vehi).subscribe(
           (data)=>{
              console.log("Return Value from REST"+data); 

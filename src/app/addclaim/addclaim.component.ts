@@ -14,9 +14,19 @@ export class AddclaimComponent implements OnInit {
   cm:any;
   traveluser:any;
   id:any;
+  id1:number|undefined;
   idnew:number=0;
   constructor(private claimService:ClaimService, private route:ActivatedRoute,private router:Router) { 
     this.claims=new Claim();
+    this.claimService.getHighestUserId().subscribe(
+      (data:any)=>{
+        console.log(data); 
+       // this.id=data.toString();
+       this.id1=data+1;
+        console.log(this.id1);
+        this.claims.claimid=this.id1;
+        console.log("Inside method:"+this.claims.claimid);
+      });
   }
 
   ngOnInit(): void {

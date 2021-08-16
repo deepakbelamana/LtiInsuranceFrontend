@@ -1,14 +1,15 @@
-<p>admin works!</p>
+<h1 style="margin-left: 600px;">Admin Dashboard</h1>
 <div class="admintable">
 <div>
-<table class="table">
+
+<table class="table" style="margin-left:30px;">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Claim ID</th>
         <th scope="col">Type</th>
-        <th scope="col">Ticket raised date</th>
+    
         <th scope="col">Status</th>
-        <th scope="col">Ticket resolved date</th>
+        
         <th scope="col">Policy No</th>
         <th scope="col">Reason</th>
         <th scope="col">Action</th>
@@ -18,9 +19,9 @@
         <tr *ngFor="let c of cm">
             <td>{{c.claimid}}</td>
             <td>{{c.type}}</td>
-            <td>{{c.ticketdate}}</td>
+         
             <td>{{c.status}}</td>
-            <td>{{c.ticketresolveddate}}</td>
+    
             <td>{{c.policyno}}</td>
             <td>{{c.reason}}</td>
             <td>
@@ -67,14 +68,14 @@
 </div>
 
 <div>
-    <table class="table">
+    <table class="table" style="margin-left:200px;">
         <thead class="thead-dark">
           <tr>
             <th scope="col">Claim ID</th>
             <th scope="col">Type</th>
-            <th scope="col">Ticket raised date</th>
+          
             <th scope="col">Status</th>
-            <th scope="col">Ticket resolved date</th>
+            
             <th scope="col">Policy No</th>
             <th scope="col">Reason</th>
             <th scope="col">Action</th>
@@ -84,9 +85,9 @@
             <tr *ngFor="let c of vm">
                 <td>{{c.claimid}}</td>
                 <td>{{c.type}}</td>
-                <td>{{c.ticketdate}}</td>
+      
                 <td>{{c.status}}</td>
-                <td>{{c.ticketresolveddate}}</td>
+               
                 <td>{{c.policyno}}</td>
                 <td>{{c.reason}}</td>
                 <td>
@@ -132,3 +133,4 @@
     </table>
     </div>
 </div>
+

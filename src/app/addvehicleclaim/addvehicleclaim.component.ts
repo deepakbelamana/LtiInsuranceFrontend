@@ -15,6 +15,7 @@ export class AddvehicleclaimComponent implements OnInit {
   stat1:Claim ;
    id:any;
    idnew:number=0;
+   id1:number|undefined;
   cm:any;
   vehicleclaim:Vehicleclaim;
   vehiclepolicy:any;
@@ -23,6 +24,15 @@ export class AddvehicleclaimComponent implements OnInit {
     this.vehicleclaim=new Vehicleclaim;
     this.stat=new Claim();
     this.stat1=new Claim();
+    this.claimService.getHighestUserId1().subscribe(
+      (data:any)=>{
+        console.log(data); 
+       // this.id=data.toString();
+       this.id1=data+1;
+        console.log(this.id1);
+        this.vehicleclaim.claimid=this.id1;
+        console.log("Inside method:"+this.vehicleclaim.claimid);
+      });
   }
 
   ngOnInit(): void {

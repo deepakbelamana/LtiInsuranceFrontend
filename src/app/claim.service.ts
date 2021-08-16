@@ -65,6 +65,17 @@ export class ClaimService {
     return this.httpClient.get(this.baseurl+"/claim/"+id);
   }
 
+
+  getHighestUserId()
+   {
+    return this.httpClient.get(this.baseurl+"/highestid");
+   }
+
+   getHighestUserId1()
+   {
+    return this.httpClient.get(this.baseurl+"/highestid1");
+   }
+
   getbyidtraveluser(id:any){
     return this.httpClient.get(this.baseurl+"/claim/traveluser/"+id);
   }

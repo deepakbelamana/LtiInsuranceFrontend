@@ -103,15 +103,20 @@ export class RenewpolicyComponent implements OnInit {
       console.log(data);
       this.object=data;
       console.log(this.object);
-      if(this.object==true)
-      {
+      
         alert("renewd successfully");
-      }
+       
+        this.router.navigate(['Home/'+this.idnew])
+      
+     
     })
 
    }
 
-
+gotohome()
+{
+  this.router.navigate(['Home/'+this.idnew])
+}
 
 
 }
